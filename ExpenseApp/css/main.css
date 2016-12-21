@@ -1,0 +1,200 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+#ImageButton1 {
+    margin-top: 7px;
+    margin-right: 7px;
+    margin-left: 7px;
+}
+
+img {
+    border: 0 none;
+}
+
+a img {
+    border: 0 none;
+}
+
+a {
+    color: #595959;
+    text-decoration: none;
+}
+
+
+.basliklar {
+    font-size: 16px;
+    padding-left: 10px;
+    color: #3d688d;
+}
+
+.baslikBack {
+    background-image: url(../img/back001.png);
+    background-position: left top;
+}
+
+.txBoxSol {
+    float: left;
+    height: 37px;
+    width: 9px;
+    background-image: url(../img/txBoxSol.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.txBoxOrta {
+    float: left;
+    height: 37px;
+    width: auto;
+    background-image: url(../img/txBoxOrta.png);
+    background-repeat: repeat-x;
+    background-position: left center;
+}
+
+.txBoxSag {
+    float: left;
+    height: 37px;
+    width: 9px;
+    background-image: url(../img/txBoxSag.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.ortaDiv {
+    width: 900px;
+    margin-bottom: 10px;
+}
+
+.kolonDiv {
+    float: left;
+    margin-right: 20px;
+}
+
+.txBoxBaslik {
+    text-align: left;
+    height: 15px;
+    padding-left: 3px;
+}
+
+.div80px {
+    width: auto;
+    height: 57px;
+}
+
+.div160px {
+    width: auto;
+}
+
+.txBoxSol120 {
+    float: left;
+    height: 120px;
+    width: 9px;
+    background-image: url(../img/txBoxSol120.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.txBoxOrta120 {
+    float: left;
+    height: 120px;
+    width: auto;
+    background-image: url(../img/txBoxOrta120.png);
+    background-repeat: repeat-x;
+    background-position: left center;
+}
+
+.txBoxSag120 {
+    float: left;
+    height: 120px;
+    width: 9px;
+    background-image: url(../img/txBoxSag120.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.btnKaydet {
+    width: 111px;
+    height: 31px;
+    background-image: url(../img/btnKaydet.png);
+    background-position: left top;
+}
+
+    .btnKaydet:hover {
+        background-position: left bottom;
+    }
+
+.btnSil {
+    width: 66px;
+    height: 31px;
+    background-image: url(../img/btnSil.png);
+    background-position: left top;
+}
+
+    .btnSil:hover {
+        background-position: left bottom;
+    }
+
+.btnYeni {
+    width: 66px;
+    height: 31px;
+    background-image: url(../img/btnYeni.png);
+    background-position: left top;
+}
+
+    .btnYeni:hover {
+        background-position: left bottom;
+    }
+
+.btnAra {
+    width: 66px;
+    height: 31px;
+    background-image: url(../img/btnAra.png);
+    background-position: left top;
+}
+
+    .btnAra:hover {
+        background-position: left bottom;
+    }
+
+.btnPersonelAta {
+    width: 111px;
+    height: 31px;
+    background-image: url(../img/btnPersonelAta.png);
+    background-position: left top;
+}
+
+    .btnPersonelAta:hover {
+        background-position: left bottom;
+    }
+
+.clear {
+    clear: both;
+}
+
+.blok {
+    float: left;
+    margin-right: 5px;
+}
+
+.icBlok {
+    float: left;
+    padding-top: 12px;
+}
+
+.anaBlok {
+    float: left;
+    margin-top: 10px;
+    width: 100%;
+    padding-left: 5px;
+}
+
+.clearDiv {
+    clear: both;
+}
+
+#tasiyici {
+    width: 975px;
+}
