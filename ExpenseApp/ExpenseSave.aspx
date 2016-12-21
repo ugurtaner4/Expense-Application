@@ -10,7 +10,7 @@
             <asp:Panel id="Panel1" runat="server" CssClass="panel" GroupingText="Masraf Bilgileri">
                 <table>
                     <tr>
-                        <td class="style1" align="left">Belge Tarihi</td>
+                        <td class="style1" align="left">Belge Tarihi</td> 
                         <td class="style1">
                             <dx:ASPxCalendar ID="dteBlg" runat="server"></dx:ASPxCalendar>
                         </td>
