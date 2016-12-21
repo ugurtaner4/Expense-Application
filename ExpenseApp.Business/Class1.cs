@@ -8,6 +8,6 @@ namespace ExpenseApp.Business
 {
     public class Class1
     {
-
+        //egemen change
     }
 }
