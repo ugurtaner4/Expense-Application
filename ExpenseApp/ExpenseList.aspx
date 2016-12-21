@@ -10,6 +10,7 @@
     <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="false" DataSourceID="LinqDataSource1" KeyFieldName="ID" OnFocusedRowChanged="ASPxGridview1_FocusedRowChanged" EnableCallBacks="False" Width="100%" Caption="Kayitli Masraflar">
         <Columns>
             <dx:GridViewCommandColumn Caption=" " VisibleIndex="0">
+
                 <FilterTemplate></FilterTemplate>
             </dx:GridViewCommandColumn> 
             <dx:GridViewDataTextColumn FieldName="ID" ReadOnly="true" Visible="false" VisibleIndex="1">
