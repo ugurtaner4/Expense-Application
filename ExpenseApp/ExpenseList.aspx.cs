@@ -12,6 +12,7 @@ namespace ExpenseApp
         protected void Page_Load(object sender, EventArgs e)
         {
             //deneme ugur
+            //deneme egemen
         }
         protected void ASPxGridview1_FocusedRowChanged(object sender, EventArgs e)
         {
