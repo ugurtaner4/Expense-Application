@@ -1,15 +1,15 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/yoda.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="ExpenseApp.Index" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>KODLAB ASP.NET İş Takip Projesi</title>
 <link href="styles/layout.css" rel="stylesheet" type="text/css" />
 <link href="styles/wysiwyg.css" rel="stylesheet" type="text/css" />
 <!-- Theme Start -->
 <link href="themes/blue/styles.css" rel="stylesheet" type="text/css" />
 <!-- Theme End -->
-</head>
-<body id="homepage">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <body id="homepage">
 	<div id="header">
     	<a href="" title=""><img src="img/cp_logo.png" alt="Control Panel" class="logo" /></a>
     	
@@ -79,7 +79,7 @@
         
         <ul id="nav">
         	
-            <li>
+            <li runat="server" id="liCustomerTransactions">
                 <a class="collapsed heading">Müşteri İşlemleri</a>
                  <ul class="navigation">
                     <li><a href="MusteriKayit.aspx" title="">Müşteri Kayıt</a></li>
@@ -124,4 +124,4 @@
     </script>
     <![endif]--> 
 </body>
-</html>
+</asp:Content>

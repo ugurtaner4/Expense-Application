@@ -73,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ExpenseList.aspx" />
+    <Content Include="Index.aspx" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -101,6 +102,13 @@
     </Compile>
     <Compile Include="ExpenseSave.aspx.designer.cs">
       <DependentUpon>ExpenseSave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="yoda.Master.cs">
