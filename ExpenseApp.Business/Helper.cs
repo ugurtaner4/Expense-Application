@@ -23,10 +23,9 @@ namespace ExpenseApp.Business
             var srg2 = entity.Expense.Where(t => t.Amount == 2 && t.ApprovalState == (int)ApprovalStateEnum.WaitingForManagerApproval).ToList();
         }
 
-        public List<ExpenseDTO> GetWaitingForManagerApprovalExpenses(string approvalState)
+        public List<ExpenseDTO> GetWaitingForManagerApprovalExpenses()
         {
-            var approvalStateInt = Convert.ToInt16(approvalState);
-            var expenses = entity.Expense.Where(t => t.ApprovalState == approvalStateInt).ToList();
+            var expenses = entity.Expense.Where(t => t.ApprovalState == (int)ApprovalStateEnum.WaitingForManagerApproval).ToList();
             return expenses.ToExpenseDTO();
         }
     }

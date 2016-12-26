@@ -19,7 +19,7 @@ namespace ExpenseApp.UI
         protected void btnGetData_Click(object sender, EventArgs e)
         {
             helper = new Helper();
-            var expenses  = helper.GetWaitingForManagerApprovalExpenses(txtApprovalState.Text);
+            var expenses  = helper.GetWaitingForManagerApprovalExpenses();
         }
     }
 }
