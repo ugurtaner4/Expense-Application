@@ -37,7 +37,7 @@
                         FilterControlPopupCaption="Filtrelendi" GroupContinuedOnNextPage="Sonraki Sayfa"
                         GroupPanel="Grupla" HeaderFilterShowAll="Tümünü Göster" HeaderFilterShowBlanks="Boş kayıtlar"
                         HeaderFilterShowNonBlanks="Boş olmayanlar" Title="KAYITLI MÜŞTERİLER" />
-                    <Styles>s
+                    <Styles>
                         <AlternatingRow BackColor="#CCCCCC">
                         </AlternatingRow>
                     </Styles>

@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Enums\ApprovalStateEnum.cs" />
     <Compile Include="Expense.cs">
       <DependentUpon>ExpenseModel.tt</DependentUpon>
     </Compile>

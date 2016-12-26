@@ -1,0 +1,75 @@
+﻿
+/* css kodları eklenecek */
+a{
+    text-decoration:none;
+
+}
+a:hover
+{
+    color:#393939;
+    font-weight:bold;
+
+}
+
+.panel
+{
+    padding: 8px;
+    margin-right: 10px;
+    float: left;
+    border-color: Gray;
+}
+
+.legend
+{
+    background-color: #EFEFFF;
+    padding: 2px;
+    border: 1px solid #66CCFF;
+}
+
+
+.table
+{
+    margin-top: 10px;
+}
+
+.buton
+{
+    float: left;
+    width: 61px;
+    height: 50px;
+    margin: 10px;
+}
+
+.labelHasta
+{
+    border: 1px solid #66CCFF;
+    background-color: #EFEFFF;
+    display: block;
+    padding: 0px 2px;
+    vertical-align: middle;
+    margin-top: 5px;
+}
+
+
+
+#Cinsiyet, #Medeni, #KanGrp
+{
+    border: 1px solid #FFA500;
+    background-color: #EFEFFF;
+    font-weight: bold;
+}
+
+
+
+.style1
+{
+    padding: 0px 2px;
+    vertical-align: middle;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.grid
+{
+    float: left;
+}
