@@ -82,7 +82,7 @@
             <li runat="server" id="liCustomerTransactions">
                 <a class="collapsed heading">Müşteri İşlemleri</a>
                  <ul class="navigation">
-                    <li><a href="MusteriKayit.aspx" title="">Müşteri Kayıt</a></li>
+                    <li><a href="KullaniciEkle.aspx" title="">Müşteri Kayıt</a></li>
                     <li><a href="RandevuVer.aspx" title="">Randevu Ver</a></li>
                     <li><a href="RandevuSuz.aspx" title="">Randevu Süz</a></li>
 					  <li><a href="IslemYap.aspx" title="">İşlem Yap</a></li>

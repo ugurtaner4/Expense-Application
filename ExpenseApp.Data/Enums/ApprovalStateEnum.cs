@@ -9,6 +9,9 @@ namespace ExpenseApp.Data.Enums
     public enum ApprovalStateEnum   
     {
         Undefined = 0,
-        WaitingForManagerApproval = 1
+        WaitingForManagerApproval = 1,
+        WaitingForAccountantPayment = 2,
+        Paid = 3,
+        Rejected =4
     }
 }

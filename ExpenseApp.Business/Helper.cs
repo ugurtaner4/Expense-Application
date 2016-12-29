@@ -16,11 +16,21 @@ namespace ExpenseApp.Business
     {
         public ExpenseAppEntities entity = new ExpenseAppEntities();
 
-        public void SqlFetch()
+        public void AddUSer(String UserName,String Pass,String Name, String Surname, String Email,String PhoneNumber)
         {
-            var srg = entity.Expense.ToList();
+            User u = new User();
+            u.UserName = UserName;
+            u.Password = Pass;
+            u.Name = Name;
+            u.Surname = Surname;
+            u.Email = Email;
+            u.PhoneNumber = PhoneNumber;
+             entity.User.Add(u);
+            entity.SaveChanges();
 
-            var srg2 = entity.Expense.Where(t => t.Amount == 2 && t.ApprovalState == (int)ApprovalStateEnum.WaitingForManagerApproval).ToList();
+  
+            
+
         }
 
         public List<ExpenseDTO> GetWaitingForManagerApprovalExpenses()
