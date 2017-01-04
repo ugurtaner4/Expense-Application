@@ -17,7 +17,7 @@ namespace ExpenseApp.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public UserRole()
         {
-            this.User = new HashSet<User>();
+            this.User1 = new HashSet<User>();
         }
     
         public int Id { get; set; }
@@ -25,6 +25,6 @@ namespace ExpenseApp.Data
         public Nullable<bool> IsDeleted { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<User> User { get; set; }
+        public virtual ICollection<User> User1 { get; set; }
     }
 }

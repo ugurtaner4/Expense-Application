@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ExpenseAppModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ExpenseAppModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <!--Errors Found During Generation:
 warning 6002: The table/view 'ExpenseApp.dbo.Expense' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Expense">
@@ -40,7 +40,7 @@ warning 6002: The table/view 'ExpenseApp.dbo.Expense' does not have a primary ke
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" Nullable="false" />
-          <Property Name="RoleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserRoleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserName" Type="nvarchar" MaxLength="50" />
           <Property Name="Password" Type="nvarchar" MaxLength="50" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" />
@@ -57,7 +57,7 @@ warning 6002: The table/view 'ExpenseApp.dbo.Expense' does not have a primary ke
           <Property Name="RoleName" Type="nvarchar" MaxLength="50" />
           <Property Name="IsDeleted" Type="bit" />
         </EntityType>
-        <Association Name="FK_Expense_User">
+        <Association Name="FK_Expense_User1">
           <End Role="User" Type="Self.User" Multiplicity="1" />
           <End Role="Expense" Type="Self.Expense" Multiplicity="*" />
           <ReferentialConstraint>
@@ -69,7 +69,7 @@ warning 6002: The table/view 'ExpenseApp.dbo.Expense' does not have a primary ke
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_User_UserRole">
+        <Association Name="FK_User_UserRole1">
           <End Role="UserRole" Type="Self.UserRole" Multiplicity="1" />
           <End Role="User" Type="Self.User" Multiplicity="*" />
           <ReferentialConstraint>
@@ -77,7 +77,7 @@ warning 6002: The table/view 'ExpenseApp.dbo.Expense' does not have a primary ke
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="User">
-              <PropertyRef Name="RoleId" />
+              <PropertyRef Name="UserRoleId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -101,17 +101,16 @@ warning 6002: The table/view 'ExpenseApp.dbo.Expense' does not have a primary ke
     [Expense].[ExpenseDetail] AS [ExpenseDetail]
     FROM [dbo].[Expense] AS [Expense]</DefiningQuery>
           </EntitySet>
-          <AssociationSet Name="FK_Expense_User" Association="Self.FK_Expense_User">
+          <AssociationSet Name="FK_Expense_User1" Association="Self.FK_Expense_User1">
             <End Role="User" EntitySet="User" />
             <End Role="Expense" EntitySet="Expense" />
           </AssociationSet>
-          <AssociationSet Name="FK_User_UserRole" Association="Self.FK_User_UserRole">
+          <AssociationSet Name="FK_User_UserRole1" Association="Self.FK_User_UserRole1">
             <End Role="UserRole" EntitySet="UserRole" />
             <End Role="User" EntitySet="User" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ExpenseAppModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -130,7 +129,6 @@ warning 6002: The table/view 'ExpenseApp.dbo.Expense' does not have a primary ke
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="RoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -139,7 +137,8 @@ warning 6002: The table/view 'ExpenseApp.dbo.Expense' does not have a primary ke
           <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="IsDeleted" Type="Boolean" />
           <NavigationProperty Name="Expense" Relationship="Self.FK_Expense_User" FromRole="User" ToRole="Expense" />
-          <NavigationProperty Name="UserRole" Relationship="Self.FK_User_UserRole" FromRole="User" ToRole="UserRole" />
+          <Property Name="UserRoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="UserRole1" Relationship="ExpenseAppModel.FK_User_UserRole1" FromRole="User" ToRole="UserRole" />
         </EntityType>
         <EntityType Name="UserRole">
           <Key>
@@ -148,7 +147,7 @@ warning 6002: The table/view 'ExpenseApp.dbo.Expense' does not have a primary ke
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="IsDeleted" Type="Boolean" />
-          <NavigationProperty Name="User" Relationship="Self.FK_User_UserRole" FromRole="UserRole" ToRole="User" />
+          <NavigationProperty Name="User1" Relationship="ExpenseAppModel.FK_User_UserRole1" FromRole="UserRole" ToRole="User" />
         </EntityType>
         <EntityType Name="Expense">
           <Key>
@@ -181,18 +180,6 @@ warning 6002: The table/view 'ExpenseApp.dbo.Expense' does not have a primary ke
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_User_UserRole">
-          <End Role="UserRole" Type="Self.UserRole" Multiplicity="1" />
-          <End Role="User" Type="Self.User" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="UserRole">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="User">
-              <PropertyRef Name="RoleId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="ExpenseAppEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="User" EntityType="Self.User" />
@@ -202,11 +189,23 @@ warning 6002: The table/view 'ExpenseApp.dbo.Expense' does not have a primary ke
             <End Role="User" EntitySet="User" />
             <End Role="Expense" EntitySet="Expense" />
           </AssociationSet>
-          <AssociationSet Name="FK_User_UserRole" Association="Self.FK_User_UserRole">
+          <AssociationSet Name="FK_User_UserRole1" Association="ExpenseAppModel.FK_User_UserRole1">
             <End Role="UserRole" EntitySet="UserRole" />
             <End Role="User" EntitySet="User" />
           </AssociationSet>
         </EntityContainer>
+        <Association Name="FK_User_UserRole1">
+          <End Type="ExpenseAppModel.UserRole" Role="UserRole" Multiplicity="1" />
+          <End Type="ExpenseAppModel.User" Role="User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserRole">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="UserRoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -227,8 +226,8 @@ warning 6002: The table/view 'ExpenseApp.dbo.Expense' does not have a primary ke
           <EntitySetMapping Name="User">
             <EntityTypeMapping TypeName="ExpenseAppModel.User">
               <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="UserRoleId" ColumnName="UserRoleId" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -280,7 +279,7 @@ warning 6002: The table/view 'ExpenseApp.dbo.Expense' does not have a primary ke
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />

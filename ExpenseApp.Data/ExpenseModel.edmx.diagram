@@ -10,7 +10,7 @@
         <EntityTypeShape EntityType="ExpenseAppModel.UserRole" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
         <EntityTypeShape EntityType="ExpenseAppModel.Expense" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="ExpenseAppModel.FK_Expense_User" ManuallyRouted="false" />
-        <AssociationConnector Association="ExpenseAppModel.FK_User_UserRole" ManuallyRouted="false" />
+        <AssociationConnector Association="ExpenseAppModel.FK_User_UserRole1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
