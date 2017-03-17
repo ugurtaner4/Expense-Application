@@ -10,7 +10,7 @@ namespace ExpenseApp.UI
 {
     public partial class Index : System.Web.UI.Page
     {
-        Helper helper = null;
+        ExpenseApp.Business.Helpers.ExpenseHelper helper = null;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -18,8 +18,8 @@ namespace ExpenseApp.UI
 
         protected void btnGetData_Click(object sender, EventArgs e)
         {
-            helper = new Helper();
-            var expenses  = helper.GetWaitingForManagerApprovalExpenses();
+            helper = new Business.Helpers.ExpenseHelper();
+            var expenses = helper.GetExpenses();
         }
     }
 }

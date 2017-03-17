@@ -26,7 +26,5 @@ namespace ExpenseApp.Data
         public string Explanation { get; set; }
         public Nullable<bool> IsSentToApproved { get; set; }
         public string ExpenseDetail { get; set; }
-    
-        public virtual User User { get; set; }
     }
 }

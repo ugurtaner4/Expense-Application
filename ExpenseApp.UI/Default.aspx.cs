@@ -7,11 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace ExpenseApp.UI
 {
-    public partial class Yoda : System.Web.UI.MasterPage
+    public partial class Default : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

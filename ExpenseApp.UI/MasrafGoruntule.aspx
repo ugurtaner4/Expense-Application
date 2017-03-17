@@ -1,5 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Yoda.Master" AutoEventWireup="true" CodeBehind="KullaniciEkle.aspx.cs" Inherits="ExpenseApp.UI.KullaniciEkle" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Yoda.Master" AutoEventWireup="true" CodeBehind="MasrafGoruntule.aspx.cs" Inherits="ExpenseApp.UI.MasrafGoruntule" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+   
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
@@ -10,32 +11,32 @@
         <form action="KullaniciEkle.aspx" method="get">
             <tr>
                 <td>
-    <asp:TextBox ID="TextBox1" runat="server" >Kullanici Adi</asp:TextBox>
+    <asp:TextBox ID="TextBox1"  runat="server" Width="242px" >Tutar</asp:TextBox>
                     </td>
             </tr>
                   <tr>
                 <td>
-    <asp:TextBox ID="TextBox2" runat="server" >Şifre</asp:TextBox>
+    <asp:TextBox ID="TextBox2" runat="server" Width="242px" >Olusturan</asp:TextBox>
                     </td>
             </tr>
            <tr>
                 <td>
-    <asp:TextBox ID="TextBox3" runat="server" >İsim</asp:TextBox>
+    <asp:TextBox ID="TextBox3" Height="100px" width="242px" runat="server" >Aciklama</asp:TextBox>
                     </td>
             </tr>
            <tr>
                 <td>
-    <asp:TextBox ID="TextBox4" runat="server" >Soyisim</asp:TextBox>
+    <asp:TextBox ID="TextBox4" runat="server" Width="242px" >Soyisim</asp:TextBox>
                     </td>
             </tr>
           <tr>
                 <td>
-    <asp:TextBox ID="TextBox5" runat="server" >Email</asp:TextBox>
+    <asp:TextBox ID="TextBox5" runat="server" Width="242px" >Email</asp:TextBox>
                     </td>
             </tr>
                   <tr>
                 <td>
-    <asp:TextBox ID="TextBox6" runat="server" >Tel NO</asp:TextBox>
+    <asp:TextBox ID="TextBox6" runat="server" Width="242px" >Tel NO</asp:TextBox>
                     </td>
             </tr>
                <tr>
@@ -67,3 +68,4 @@
             </div>
         </div>
 </asp:Content>
+

@@ -13,10 +13,10 @@ namespace ExpenseApp.Data
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ExpenseAppEntities : DbContext
+    public partial class ExpenseAppEntities1 : DbContext
     {
-        public ExpenseAppEntities()
-            : base("name=ExpenseAppEntities")
+        public ExpenseAppEntities1()
+            : base("name=ExpenseAppEntities1")
         {
         }
     

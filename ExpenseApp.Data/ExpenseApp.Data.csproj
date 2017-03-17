@@ -54,61 +54,59 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Enums\ApprovalStateEnum.cs" />
     <Compile Include="Expense.cs">
-      <DependentUpon>ExpenseModel.tt</DependentUpon>
+      <DependentUpon>ExpenseMOdel.tt</DependentUpon>
     </Compile>
-    <Compile Include="ExpenseModel.Context.cs">
+    <Compile Include="ExpenseMOdel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ExpenseModel.Context.tt</DependentUpon>
+      <DependentUpon>ExpenseMOdel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="ExpenseModel.cs">
+    <Compile Include="ExpenseMOdel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ExpenseModel.tt</DependentUpon>
+      <DependentUpon>ExpenseMOdel.tt</DependentUpon>
     </Compile>
-    <Compile Include="ExpenseModel.Designer.cs">
+    <Compile Include="ExpenseMOdel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ExpenseModel.edmx</DependentUpon>
+      <DependentUpon>ExpenseMOdel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sysdiagrams.cs">
-      <DependentUpon>ExpenseModel.tt</DependentUpon>
+      <DependentUpon>ExpenseMOdel.tt</DependentUpon>
     </Compile>
     <Compile Include="User.cs">
-      <DependentUpon>ExpenseModel.tt</DependentUpon>
+      <DependentUpon>ExpenseMOdel.tt</DependentUpon>
     </Compile>
     <Compile Include="UserRole.cs">
-      <DependentUpon>ExpenseModel.tt</DependentUpon>
+      <DependentUpon>ExpenseMOdel.tt</DependentUpon>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="ExpenseModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ExpenseModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
-    <None Include="ExpenseModel.edmx.diagram">
-      <DependentUpon>ExpenseModel.edmx</DependentUpon>
+    <EntityDeploy Include="ExpenseMOdel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ExpenseMOdel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ExpenseMOdel.edmx.diagram">
+      <DependentUpon>ExpenseMOdel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ExpenseModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ExpenseModel.edmx</DependentUpon>
-      <LastGenOutput>ExpenseModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="ExpenseModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ExpenseModel.edmx</DependentUpon>
-      <LastGenOutput>ExpenseModel.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="ExpenseMOdel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ExpenseMOdel.edmx</DependentUpon>
+      <LastGenOutput>ExpenseMOdel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ExpenseMOdel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ExpenseMOdel.edmx</DependentUpon>
+      <LastGenOutput>ExpenseMOdel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -7,11 +7,13 @@ using System.Web.UI.WebControls;
 
 namespace ExpenseApp.UI
 {
-    public partial class Yoda : System.Web.UI.MasterPage
+    public partial class Login : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+       
+
+        protected void BtnGonder_Click(object sender, EventArgs e)
         {
-            
+            Response.Redirect("Default.aspx");
         }
     }
 }

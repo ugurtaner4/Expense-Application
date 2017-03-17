@@ -10,7 +10,7 @@
 namespace ExpenseApp.UI {
     
     
-    public partial class KullaniciEkle {
+    public partial class MasrafGoruntule {
         
         /// <summary>
         /// TextBox1 control.

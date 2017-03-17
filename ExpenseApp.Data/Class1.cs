@@ -8,5 +8,7 @@ namespace ExpenseApp.Data
 {
     public class Class1
     {
+        ExpenseAppEntities1 en = new ExpenseAppEntities1();
+        public void get() { }
     }
 }

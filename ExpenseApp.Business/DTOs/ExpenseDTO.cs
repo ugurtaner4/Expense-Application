@@ -8,6 +8,7 @@ namespace ExpenseApp.Business.DTOs
 {
     public class ExpenseDTO
     {
+        public int id { get; internal set; }
         public int UserId { get; set; }
         public decimal ApprovalState { get; set; }
         public int Amount { get; set; }

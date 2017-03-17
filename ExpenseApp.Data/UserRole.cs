@@ -14,17 +14,8 @@ namespace ExpenseApp.Data
     
     public partial class UserRole
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public UserRole()
-        {
-            this.User1 = new HashSet<User>();
-        }
-    
         public int Id { get; set; }
         public string RoleName { get; set; }
         public Nullable<bool> IsDeleted { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<User> User1 { get; set; }
     }
 }
