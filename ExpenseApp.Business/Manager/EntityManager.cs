@@ -26,7 +26,7 @@ namespace ExpenseApp.Business.Manager
         }
         public T First(Expression<Func<T,bool>>where)
         {
-            return _objectSet.First(where);
+            return _objectSet.FirstOrDefault(where);
         }
         public IEnumerable<T> Find(Expression<Func<T, bool>> where)
         {
@@ -46,8 +46,7 @@ namespace ExpenseApp.Business.Manager
         }
         public List<T> List()
         {
-            List<T> liste = new List<T>();
-            return liste;
+            return _objectSet.ToList();
         }
         public virtual void Update(T entity)
         {

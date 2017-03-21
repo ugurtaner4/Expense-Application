@@ -12,11 +12,14 @@ namespace ExpenseApp.Business.Helpers
    public class UserHelper
     {
         EntityManager<User> userManager = new EntityManager<User>();
+        public UserDTO GetUser(string userName,string pass)
+        {
+            return userManager.First(t => t.UserName == userName && t.Password == pass).ToUserDto();
+        }
         public List<UserDTO> GetUser()
         {
             var users = userManager.List();
-            return users.Where(t => t.UserRoleId ==1 ).ToList().ToUserDTOList();
-
+            return users.Where(t => t.IsDeleted == false ).ToList().ToUserDTOList();
         }
         public UserDTO GetUser(int id)
         {

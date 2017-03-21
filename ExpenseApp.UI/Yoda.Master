@@ -6,115 +6,131 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>MASRAF UYGULAMASI</title>
-<link href="styles/layout.css" rel="stylesheet" type="text/css" />
-<link href="styles/wysiwyg.css" rel="stylesheet" type="text/css" />
-<!-- Theme Start -->
-<link href="themes/blue/styles.css" rel="stylesheet" type="text/css" />
-<!-- Theme End -->
+    <link href="styles/layout.css" rel="stylesheet" type="text/css" />
+    <link href="styles/wysiwyg.css" rel="stylesheet" type="text/css" />
+    <!-- Theme Start -->
+    <link href="themes/blue/styles.css" rel="stylesheet" type="text/css" />
+    <!-- Theme End -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body id="homepage">
-    	<div id="header">
-    	<a href="" title=""><img src="http://icons.iconarchive.com/icons/iconsmind/outline/128/Engineering-icon.png" alt="Control Panel" class="logo" /></a>
-    	
+    <div id="header">
+        <a href="" title="">
+            <img src="http://icons.iconarchive.com/icons/iconsmind/outline/128/Engineering-icon.png" alt="Control Panel" class="logo" /></a>
+
     </div>
-        
+
     <!-- Top Breadcrumb Start -->
     <div id="breadcrumb">
-    	<ul>	
-        	<li><img src="img/icons/icon_breadcrumb.png" alt="Location" /></li>
-        	<li><strong>UĞUR TANER</strong></li>
-            <li><a href="#" title="">2015</a></li>
+        <ul>
+            <li>
+                <img src="img/icons/icon_breadcrumb.png" alt="Location" /></li>
+            <li><strong runat="server" id="nameLabel"></strong></li>
+            <li><a href="#" title=""></a></li>
             <li>/</li>
             <li class="current">Masraf Uygulaması</li>
         </ul>
     </div>
-     <div id="leftside">
-    	<div class="user">
-        	<img src="img/avatar.png" width="44" height="44" class="hoverimg" alt="Avatar" />
+    <div id="leftside">
+        <div class="user">
+            <img src="img/avatar.png" width="44" height="44" class="hoverimg" alt="Avatar" />
             <p>Giriş Yapan Kullanıcı :</p>
             <p class="username">Admin</p>
             <p class="userbtn"><a href="#" title="">Şifremi Değiştir</a></p>
-            <p class="userbtn"><a href="Login.aspx" title="">Çıkış</a></p>
+            <p class="userbtn" runat="server"><a href="Login.aspx" title="">Çıkış</a></p>
         </div>
-        
-        
+
         <ul id="nav">
-        	
-            <li>
+
+            <li runat="server" id="workerNode">
                 <a class="collapsed heading">Çalışan İşlemleri</a>
-                 <ul class="navigation">
+                <ul class="navigation">
                     <li><a href="MasrafGoruntule.aspx" title="">Masraf Kayıt</a></li>
                     <li><a href="MailGonder.aspx" title="">Mail Gönder</a></li>
                     <li><a href="RandevuSuz.aspx" title="">Randevu Süz</a></li>
-					  <li><a href="IslemYap.aspx" title="">İşlem Yap</a></li>
+                    <li><a href="IslemYap.aspx" title="">İşlem Yap</a></li>
                 </ul>
             </li>
-            <li><a class="expanded heading">Yönetici İşlemleri</a>
+            <li runat="server" id="managerNode"><a class="collapsed heading">Yönetici İşlemleri</a>
                 <ul class="navigation">
                     <li><a href="KullaniciEkle.aspx" title="" class="likelogin">Personel Kayıt</a></li>
                     <li><a href="MailGonder.aspx" title="">Mail Gönder</a></li>
                     <li><a href="#" title="">Section link here</a></li>
                 </ul>
-            </li>     
-<li><a class="expanded heading">Muhasebe</a>
+            </li>
+            <li runat="server" id="accountantNode"><a class="collapsed heading">Muhasebe</a>
                 <ul class="navigation">
                     <li><a href="#" title="" class="likelogin">Tahsilat</a></li>
                     <li><a href="MailGonder.aspx" title="">Mail Gönder</a></li>
-                    
+
                 </ul>
-            </li>    			
+            </li>
         </ul>
     </div>
     <form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-         <div id="rightside">
-    
-    	
-     
-     
-       
-        <div class="contentcontainer">
-           
-            <div class="contentbox">
- içerik buraya gelecek <br/>
-  içerik buraya gelecek <br/>
-  içerik buraya gelecek <br/>
-  içerik buraya gelecek <br/>
-  içerik buraya gelecek <br/>
-  içerik buraya gelecek <br/>
-  içerik buraya gelecek <br/>
-  içerik buraya gelecek <br/>
-  içerik buraya gelecek <br/>
-  içerik buraya gelecek <br/>
-            </div>
+        
+             <p class="userbtn" runat="server">  <asp:LinkButton ID="linkTest" runat="server" Text="Çık" OnClick="linkTest_Click"></asp:LinkButton>
+</p>
+              
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <div id="rightside">
+
+
+
+
+
+                    <div class="contentcontainer">
+
+                        <div class="contentbox">
+                            içerik buraya gelecek
+                            <br />
+                            içerik buraya gelecek
+                            <br />
+                            içerik buraya gelecek
+                            <br />
+                            içerik buraya gelecek
+                            <br />
+                            içerik buraya gelecek
+                            <br />
+                            içerik buraya gelecek
+                            <br />
+                            içerik buraya gelecek
+                            <br />
+                            içerik buraya gelecek
+                            <br />
+                            içerik buraya gelecek
+                            <br />
+                            içerik buraya gelecek
+                            <br />
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div style="clear: both;"></div>
+
+
+
+                    <div id="footer">
+                        &copy; Copyright 2015 KODLAB
+                    </div>
+
+                </div>
+            </asp:ContentPlaceHolder>
         </div>
-    
-  
-
-        
-   
-        
-        <div style="clear:both;"></div>
-
-      
-      
-        <div id="footer">
-        	&copy; Copyright 2015 KODLAB
-        </div> 
-          
-    </div>
-        </asp:ContentPlaceHolder>
-    </div>
     </form>
-    <script type="text/javascript" src="http://dwpe.googlecode.com/svn/trunk/_shared/EnhanceJS/enhance.js"></script>	
+    <script type="text/javascript" src="http://dwpe.googlecode.com/svn/trunk/_shared/EnhanceJS/enhance.js"></script>
     <script type='text/javascript' src='http://dwpe.googlecode.com/svn/trunk/charting/js/excanvas.js'></script>
-	<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js'></script>
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js'></script>
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js'></script>
-	<script type='text/javascript' src='scripts/jquery.wysiwyg.js'></script>
+    <script type='text/javascript' src='scripts/jquery.wysiwyg.js'></script>
     <script type='text/javascript' src='scripts/visualize.jQuery.js'></script>
     <script type="text/javascript" src='scripts/functions.js'></script>
 </body>

@@ -64,6 +64,9 @@ namespace ExpenseApp.Business
         }
         public static UserDTO ToUserDto(this User user)
         {
+            if (user == null)
+                return null;
+
             UserDTO userItem = new UserDTO();
             userItem.UserRoleId = user.UserRoleId;
             userItem.UserName = user.UserName;
@@ -71,6 +74,7 @@ namespace ExpenseApp.Business
             userItem.Surname = user.Surname;
             userItem.Email = user.Email;
             userItem.Password = user. Password;
+            userItem.PhoneNumber = user.PhoneNumber;
             userItem.IsDeleted = user.IsDeleted.Value;
             return userItem;
 

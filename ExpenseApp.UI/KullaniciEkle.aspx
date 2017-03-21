@@ -10,7 +10,7 @@
         <form action="KullaniciEkle.aspx" method="get">
             <tr>
                 <td>
-    <asp:TextBox ID="TextBox1" runat="server" >Kullanici Adi</asp:TextBox>
+    <asp:TextBox ID="TextBox1" runat="server"  ToolTip="Kullanici Adi"></asp:TextBox>
                     </td>
             </tr>
                   <tr>
@@ -54,12 +54,12 @@
                 <div>
                 <asp:GridView ID="GridKullanici" runat="server" AutoGenerateColumns="false">
         <Columns>
-            <asp:BoundField DataField="UserName" HeaderText="Kullanıcı Adı" ReadOnly="true" />
-                <asp:BoundField DataField="Name" HeaderText="İsim" ReadOnly="true"  />
-                <asp:BoundField DataField="Surname" HeaderText="Soyisim" ReadOnly="true" />
-                <asp:BoundField DataField="Email" HeaderText="Email" ReadOnly="true" />
-                <asp:BoundField DataField="PhoneNumber" HeaderText="Telefon Numarası" ReadOnly="true"  />
-                <asp:BoundField DataField="UserRoleId" HeaderText="Rol id" ReadOnly="true" />
+            <asp:BoundField DataField="UserName" HeaderText="Kullanıcı Adı" />
+                <asp:BoundField DataField="Name" HeaderText="İsim" />
+                <asp:BoundField DataField="Surname" HeaderText="Soyisim" />
+                <asp:BoundField DataField="Email" HeaderText="Email" />
+                <asp:BoundField DataField="PhoneNumber" HeaderText="Telefon Numarası"   />
+                <asp:BoundField DataField="UserRoleId" HeaderText="Rol id" />
         </Columns>
     </asp:GridView>
                     </div>

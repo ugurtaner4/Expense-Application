@@ -24,7 +24,7 @@
                     <asp:TextBox ID="txtLoginName" runat="server" CssClass="logininput" />
                     <p>Şifreniz:</p>
                     <asp:TextBox ID="txtPassword" runat="server" CssClass="logininput" TextMode="Password"  />
-                   
+                   <asp:Label ID="lblError" runat="server" Text="Hatalı k.adı/şifre" Style="color:red" Visible="false"></asp:Label>
                     <asp:Button ID="BtnGonder" Text=" Giriş " runat="server" CssClass="loginbtn" OnClick="BtnGonder_Click" />
                 </form>
                 <a href="SifremiUnuttum.aspx" style="text-decoration: none; color: #808080; font-size: 11px;">Şifremi Unuttum.</a>

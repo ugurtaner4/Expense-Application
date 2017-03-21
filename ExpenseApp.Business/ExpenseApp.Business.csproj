@@ -53,6 +53,7 @@
     <Compile Include="DTOs\ExpenseDTO.cs" />
     <Compile Include="DTOs\UserDTO.cs" />
     <Compile Include="DTOs\UserRoleDTO.cs" />
+    <Compile Include="Enum\UserRoleEnum.cs" />
     <Compile Include="Extensions\DtoExtensions.cs" />
     <Compile Include="Helpers\ExpenseHelper.cs" />
     <Compile Include="Helpers\UserHelper.cs" />
