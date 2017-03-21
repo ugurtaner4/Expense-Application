@@ -1,0 +1,6 @@
+Yapýlacaklar
+-------------
+
+1- Try Catch kullan (Kayýt,Güncelleme,Listeleme iþlemlerinde)
+2- Loglama yap (Log4Net i projeye entegre et)
+3- Hata yönetimi (Tüm hatalarý tek bir noktadan yakalamaya çalýþ ve ekranda hatayý bir yerde göster : masterpage e bir div ekleyip onun içini doldurup hata aldýðý noktada onu gosterebilirsin)
