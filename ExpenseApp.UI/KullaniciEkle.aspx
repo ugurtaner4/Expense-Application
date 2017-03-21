@@ -40,7 +40,7 @@
             </tr>
                <tr>
                 <td>
-    <asp:DropDownList id="ddlRole" runat="server"></asp:DropDownList>
+    <asp:DropDownList id="ddlRole" runat="server" DataTextField="Text" DataValueField="Value"></asp:DropDownList>
                     </td>
                 </tr>
             <tr>

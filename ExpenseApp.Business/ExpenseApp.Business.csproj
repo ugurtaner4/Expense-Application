@@ -41,6 +41,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,6 +56,7 @@
     <Compile Include="DTOs\UserRoleDTO.cs" />
     <Compile Include="Enum\UserRoleEnum.cs" />
     <Compile Include="Extensions\DtoExtensions.cs" />
+    <Compile Include="Extensions\HelperExtensions.cs" />
     <Compile Include="Helpers\ExpenseHelper.cs" />
     <Compile Include="Helpers\UserHelper.cs" />
     <Compile Include="Helpers\UserRoleHelper.cs" />

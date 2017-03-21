@@ -16,11 +16,23 @@ namespace ExpenseApp.UI
         UserRoleDTO usrrldto = new UserRoleDTO();
         Business.Helpers.UserRoleHelper rolehelper = new Business.Helpers.UserRoleHelper();
 
-        
-        protected void Page_Load(object sender, EventArgs e)
+        protected override void OnLoad(EventArgs e)
         {
+            base.OnLoad(e);
+
             GridKullanici.DataSource = usr.GetUser();
             GridKullanici.DataBind();
+
+            if (!IsPostBack)
+            {
+                ddlRole.DataSource = HelperExtensions.GetRoleDataSource();
+                ddlRole.DataBind();
+            }
+        }
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            
          }
 
         protected void btn1_Click(object sender, EventArgs e)
@@ -31,9 +43,12 @@ namespace ExpenseApp.UI
             usrdto.Surname = TextBox4.Text;
             usrdto.Email = TextBox5.Text;
             usrdto.PhoneNumber = TextBox6.Text;
-            usrdto.UserRoleId = 1;
+            usrdto.UserRoleId = Convert.ToInt32(ddlRole.SelectedValue);
             usrdto.IsDeleted = false;
             usr.InsertUsers(usrdto);
+
+            GridKullanici.DataSource = usr.GetUser();
+            GridKullanici.DataBind();
         }
     }
 }
